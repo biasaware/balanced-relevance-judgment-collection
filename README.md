@@ -19,7 +19,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-0lax">Boolean</td>
     <td class="tg-0lax">Boolean (%)</td>
     <td class="tg-0lax">Male Female Diff</td>
-    <td class="tg-0lax">(%)</td>
+    <td class="tg-0lax"> Improvement(%)</td>
   </tr>
 </thead>
 <tbody>
@@ -83,7 +83,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-0pky">Boolean</td>
     <td class="tg-0pky">Boolean (%)</td>
     <td class="tg-0pky">Male Female Diff</td>
-    <td class="tg-0pky">(%)</td>
+    <td class="tg-0pky"> Improvement (%)</td>
   </tr>
 </thead>
 <tbody>
