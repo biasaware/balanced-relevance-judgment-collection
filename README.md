@@ -138,7 +138,7 @@ This repository contains the code and resources for our proposed approach to cre
   <tr>
     <td class="tg-0lax" rowspan="4">BERT-base-uncased</td>
     <td class="tg-0lax" rowspan="2">1765 Neutral Queries</td>
-    <td class="tg-0lax">Original Dataset</td>
+    <td class="tg-0lax">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_base_uncased_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.072</td>
     <td class="tg-baqh">-</td>
     <td class="tg-baqh">0.059</td>
@@ -147,7 +147,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-baqh">-</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Augmented Dataset</td>
+    <td class="tg-0lax">Augmented Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_base_uncased_augmented_dataset_25.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.059</td>
     <td class="tg-baqh">18.05%</td>
     <td class="tg-baqh">0.049</td>
@@ -157,7 +157,7 @@ This repository contains the code and resources for our proposed approach to cre
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2">215 Social Problematic Queries</td>
-    <td class="tg-0lax">Original Dataset </td>
+    <td class="tg-0lax">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_base_uncased_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.029</td>
     <td class="tg-baqh">-</td>
     <td class="tg-baqh">0.017</td>
@@ -166,7 +166,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-baqh">-</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Augmented Dataset</td>
+    <td class="tg-0lax">Augmented Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_base_uncased_augmented_dataset_0.25.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.019</td>
     <td class="tg-baqh">34.48%</td>
     <td class="tg-baqh">0.011</td>
