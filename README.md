@@ -2,6 +2,46 @@
 This repository contains the code and resources for our proposed approach to create a balanced relevance-judgment collection that diminished the bias conveyed to neural rankers. The main focus of this approach would be automatically building query-document pairs that can be used for training neural rankers. We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured.
 
 
+#### Table 1: Model effectiveness on augmented datasets. * indicates statistically significant decrease in effectiveness.
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Training Dataset</span></th>
+    <th class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Ratio</span></th>
+    <th class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">MRR@10</span></th>
+    <th class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">% Reduction</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Original Set</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">-</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.3110</span></td>
+    <td class="tg-lqy6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">-</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="4"><br><br><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Augmented Datasets</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.05</span></td>
+    <td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.3133</span></td>
+    <td class="tg-eelb"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.74%</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.15</span></td>
+    <td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.3078</span></td>
+    <td class="tg-eelb"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">-1.03%</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.25</span></td>
+    <td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.3036</span></td>
+    <td class="tg-eelb"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">-2.38%</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.35</span></td>
+    <td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">0.2949</span></td>
+    <td class="tg-eelb"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">-5.18%*</span></td>
+  </tr>
+</tbody>
+</table>
 
 #### Table 3: The impact of training BERT-base-uncased on the augmented dataset on proxy measures of bias based on different neutral query sets.
 <table class="tg">
