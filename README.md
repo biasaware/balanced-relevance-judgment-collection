@@ -202,7 +202,7 @@ This repository contains the code and resources for our proposed approach to cre
   <tr>
     <td class="tg-0pky" rowspan="6">BERT-Tiny</td>
     <td class="tg-0pky" rowspan="3">1765 Neutral Queries</td>
-    <td class="tg-0pky">Original Dataset</td>
+    <td class="tg-0pky">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_tiny_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-c3ow">0.219</td>
     <td class="tg-c3ow">0.076</td>
     <td class="tg-c3ow">-</td>
@@ -212,7 +212,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-c3ow">-</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Augmented Dataset</td>
+    <td class="tg-0pky">Augmented Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_tiny_augmented_dataset_25.trec"> (Run)</td>
     <td class="tg-c3ow">0.199</td>
     <td class="tg-c3ow">0.047</td>
     <td class="tg-c3ow">38.15%</td>
@@ -222,7 +222,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-c3ow">10.74%</td>
   </tr>
   <tr>
-    <td class="tg-0lax">ADVBERT</td>
+    <td class="tg-0lax">ADVBERT <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/ADVBERT_tiny.trec"> (Run)</td>
     <td class="tg-baqh">0.189</td>
     <td class="tg-baqh">0.064</td>
     <td class="tg-baqh">15.78%</td>
@@ -233,7 +233,7 @@ This repository contains the code and resources for our proposed approach to cre
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="3">215 Social Problematic Queries</td>
-    <td class="tg-0pky">Original Dataset </td>
+    <td class="tg-0pky">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_tiny_original_dataset.trec"> (Run)</td>
     <td class="tg-c3ow">0.162</td>
     <td class="tg-c3ow">0.005</td>
     <td class="tg-c3ow">-</td>
@@ -243,7 +243,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-c3ow">-</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Augmented Dataset</td>
+    <td class="tg-0pky">Augmented Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_tiny_augmented_dataset_0.25.trec"> (Run)</td>
     <td class="tg-c3ow">0.163</td>
     <td class="tg-c3ow">0.001</td>
     <td class="tg-c3ow">79.19%</td>
@@ -253,7 +253,7 @@ This repository contains the code and resources for our proposed approach to cre
     <td class="tg-c3ow">11.11%</td>
   </tr>
   <tr>
-    <td class="tg-0lax">ADVBERT</td>
+    <td class="tg-0lax">ADVBERT <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/ADVBERT_tiny.trec"> (Run)</td>
     <td class="tg-baqh">0.149</td>
     <td class="tg-baqh">0.009</td>
     <td class="tg-baqh">-85.90%</td>
