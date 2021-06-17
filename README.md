@@ -3,7 +3,7 @@ This repository contains the code and resources for our proposed approach to cre
 
 
 
-
+#### Table 3: The impact of training BERT-base-uncased on the augmented dataset on proxy measures of bias based on different neutral query sets.
 <table class="tg">
 <thead>
   <tr>
@@ -66,7 +66,7 @@ This repository contains the code and resources for our proposed approach to cre
 </table>
 
 
-
+#### Table 4: Comparative Analysis between BERT-Tiny trained on the augmented dataset and ADVBERT Model
 <table class="tg">
 <thead>
   <tr>
