@@ -1,5 +1,19 @@
 # Balancing Large-scale Relevance Judgement Collections for Fair Neural Ranking
-This repository contains the code and resources for our proposed approach to create a balanced relevance-judgment collection that diminishes the bias conveyed to neural rankers. The main focus of this approach would be automatically building balanced query-document pairs that can be used for training neural rankers. We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. 
+This repository contains the code and resources for our proposed approach to create a balanced relevance-judgment collection that diminishes the bias conveyed to neural rankers. The main focus of this approach is to propose an automated method to generate pairs of query and relevant documents that have controlled degrees of bias. Figure below shows our proposed methodology.
+
+<p align="center">
+  <img src="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/methodology.png">
+</p>
+
+
+
+
+
+
+We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. 
+
+
+We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. 
 
 
 Table 1 shows some examples of balanced query-document pairs, in which each pair of female and male document-pairs share similar psychological characteristics.
