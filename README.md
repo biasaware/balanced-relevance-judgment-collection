@@ -110,7 +110,7 @@ We now show how combining our proposed query-document pairs with existing gold s
 </tbody>
 </table>
 
-## Bias
+## Bias Measurement
 In order measure bias we use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. We adopt two strategies to measure gender biases. The first approach relies on measuring differences observed across pairs of gender-affiliated queries. As you can see in Table 3, when the model is trained on the augmented dataset, the difference between psychological charactiristics of documents associated with male and female queries has decreased significantly.
 
 #### Table 3: Impact of training on augmented dataset on the difference in psychological characteristics of gender-affiliated queries.
