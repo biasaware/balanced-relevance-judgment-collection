@@ -5,18 +5,7 @@ This repository contains the code and resources for our proposed approach to cre
   <img src="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/methodology.png">
 </p>
 
-
-
-
-
-
-We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. 
-
-
-We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. 
-
-
-Table 1 shows some examples of balanced query-document pairs, in which each pair of female and male document-pairs share similar psychological characteristics.
+As you can see, Table 1 shows some examples of balanced query-document pairs. In this table each female and male document-pairs share similar level of psychological characteristics in their passages.
 #### Table 1: Examples of paired gendered queries in our generated dataset
 <table class="tg">
 <thead>
@@ -75,6 +64,8 @@ Table 1 shows some examples of balanced query-document pairs, in which each pair
 </tbody>
 </table>
 
+## Utility
+We now show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. For this purpose, we augment the small training set of MS MARCO with data from our generated query-document pairs using different ratios with 10\% increments. For instance, a 15% ratio would mean that we augment the MS MARCO training set with an additional n query-document pairs from our dataset where n is equivalent to 15\% of the size of the MS MARCO small training set. Based on the augmented datasets, we leverage the BERT-base-uncased transformer model for passage ranking  and train it on the original dataset, i.e., the small training set of MS MARCO, as well as the newly developed augmented datasets and compare their effectiveness in Table 2.
 
 #### Table 2: Model effectiveness on augmented datasets. * indicates statistically significant decrease in effectiveness.
 <table class="tg">
@@ -119,7 +110,8 @@ Table 1 shows some examples of balanced query-document pairs, in which each pair
 </tbody>
 </table>
 
-
+## Bias Measurement
+In order measure bias we use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. We adopt two strategies to measure gender biases. The first approach relies on measuring differences observed across pairs of gender-affiliated queries. As you can see in Table 3, when the model is trained on the augmented dataset, the difference between psychological charactiristics of documents associated with male and female queries has decreased significantly.
 
 #### Table 3: Impact of training on augmented dataset on the difference in psychological characteristics of gender-affiliated queries.
 <table class="tg">
