@@ -1,8 +1,68 @@
 # Balancing Large-scale Relevance Judgement Collections for Fair Neural Ranking
-This repository contains the code and resources for our proposed approach to create a balanced relevance-judgment collection that diminished the bias conveyed to neural rankers. The main focus of this approach would be automatically building query-document pairs that can be used for training neural rankers. We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured.
+This repository contains the code and resources for our proposed approach to create a balanced relevance-judgment collection that diminishes the bias conveyed to neural rankers. The main focus of this approach would be automatically building balanced query-document pairs that can be used for training neural rankers. We then show how combining our proposed query-document pairs with existing gold standard relevance judgement datasets can lead to the training of less biased neural rankers that have competitive retrieval effectiveness. We conduct our experiments on the MSMARCO passage collection and use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. 
 
 
-#### Table 1: Model effectiveness on augmented datasets. * indicates statistically significant decrease in effectiveness.
+Table 1 shows some examples of balanced query-document pairs, in which each pair of female and male document-pairs share similar psychological characteristics.
+#### Table 1: Examples of paired gendered queries in our generated dataset
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-1wig">Examples</th>
+    <th class="tg-1wig"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Gender Affiliation</span></th>
+    <th class="tg-1wig"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Generated Query</span></th>
+    <th class="tg-1wig"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Source Passage</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Sample Pair 1</span></td>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Male</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">when did winnie davis pass away</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">WINNIE DAVIS passed away. The obituary was featured in The Impartial Reporter on June 6, 2013.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Female</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">when did maya angelou die</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">13 of Maya Angelou's best quotes. Prolific American author, poet and civil rights activist Maya Angelou has died, according to media reports.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Sample Pair 2</span></td>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Male</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">vess carlos worth</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">$15 Million. Bryan Baeumler net worth: Brian Baeumler is a Canadian entrepreneur and TV star who has net worth of $15 million dollars.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Female</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">lesley stahl net worth</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Lesley Stahl net worth: Lesley Stahl is an American television journalist who has a net worth of $20 million dollars.Lesley Stahl was born in Lynn, Massachusetts, and went on to graduate from Wheaton College.esley Stahl net worth: Lesley Stahl is an American television journalist who has a net worth of $20 million dollars.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Sample Pair 3</span></td>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Male</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">where is ronald brown from</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Ronald Brown 13,811 people named Ronald Brown found in California, Florida and 50 other states. Click a state below to find Ronald more easily.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Female</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">where is elizabeth blackwell from</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Elizabeth Blackwell 774 people named Elizabeth Blackwell found in North Carolina, Texas and 47 other states. Click a state below to find Elizabeth more easily.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Sample Pair 4</span></td>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Male</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">who is samuel khouth</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Samuel Vincent Khouth (born October 5, 1971) is a Canadian voice actor and singer.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:normal;text-decoration:none;color:#000;background-color:transparent">Female</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">who was barbara stanwyck</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Barbara Stanwyck. Barbara Stanwyck (born Ruby Catherine Stevens; July 16, 1907 </span><span style="color:#000;background-color:transparent">January 20, 1990) was an American actress, model and dancer.</span></td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Table 2: Model effectiveness on augmented datasets. * indicates statistically significant decrease in effectiveness.
 <table class="tg">
 <thead>
   <tr>
@@ -47,7 +107,7 @@ This repository contains the code and resources for our proposed approach to cre
 
 
 
-#### Table 2: Impact of training on augmented dataset on the difference in psychological characteristics of gender-affiliated queries.
+#### Table 3: Impact of training on augmented dataset on the difference in psychological characteristics of gender-affiliated queries.
 <table class="tg">
 <thead>
   <tr>
@@ -117,7 +177,7 @@ This repository contains the code and resources for our proposed approach to cre
 
 
 
-#### Table 3: The impact of training BERT-base-uncased on the augmented dataset on proxy measures of bias based on different neutral query sets.
+#### Table 4: The impact of training BERT-base-uncased on the augmented dataset on proxy measures of bias based on different neutral query sets.
 <table class="tg">
 <thead>
   <tr>
@@ -180,7 +240,7 @@ This repository contains the code and resources for our proposed approach to cre
 </table>
 
 
-#### Table 4: Comparative Analysis between BERT-Tiny trained on the augmented dataset and ADVBERT Model
+#### Table 5: Comparative Analysis between BERT-Tiny trained on the augmented dataset and ADVBERT Model
 <table class="tg">
 <thead>
   <tr>
