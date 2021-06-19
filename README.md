@@ -110,7 +110,7 @@ We now show how combining our proposed query-document pairs with existing gold s
 </tbody>
 </table>
 
-## Bias Measurement
+## Bias
 In order measure bias we use three widely adopted psychological and stereotypical gender bias measurement methods to show that decrease in bias happens effectively regardless of how gender biases are measured. We adopt two strategies to measure gender biases. The first approach relies on measuring differences observed across pairs of gender-affiliated queries. As you can see in Table 3, when the model is trained on the augmented dataset, the difference between psychological charactiristics of documents associated with male and female queries has decreased significantly.
 
 #### Table 3: Impact of training on augmented dataset on the difference in psychological characteristics of gender-affiliated queries.
@@ -181,7 +181,7 @@ In order measure bias we use three widely adopted psychological and stereotypica
 </tbody>
 </table>
 
-
+In the second approach, we adopt another gender bias measurement strategy and use the method proposed by Navid Rekabsaz and LIWC toolkit to calculate bias among the top-10 retreived list of documents for queries and report the results in Table 4. 
 
 #### Table 4: The impact of training BERT-base-uncased on the augmented dataset on proxy measures of bias based on different neutral query sets.
 <table class="tg">
@@ -333,3 +333,5 @@ In order measure bias we use three widely adopted psychological and stereotypica
 </tbody>
 </table>
 
+## Resources
+We release the run files on dev small of MS MARCO, BERT models fine-tuned on all the dataset, and our proposed balanced query-document pairs to help the community reproduce our results.
