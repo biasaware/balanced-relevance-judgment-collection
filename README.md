@@ -205,7 +205,7 @@ In the second approach, we adopt another gender bias measurement strategy and us
 <tbody>
   <tr>
     <td class="tg-0lax" rowspan="4">BERT-base-uncased</td>
-    <td class="tg-0lax" rowspan="2">[1765 Neutral Queries](https://github.com/navid-rekabsaz/GenderBias_IR/blob/master/resources/queries_gender_annotated.csv)</td>
+    <td class="tg-0lax" rowspan="2"><a href="https:https://github.com/navid-rekabsaz/GenderBias_IR/blob/master/resources/queries_gender_annotated.csv" target="_top">1765 Neutral Queries</td>
     <td class="tg-0lax">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_base_uncased_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.072</td>
     <td class="tg-baqh">-</td>
@@ -224,7 +224,7 @@ In the second approach, we adopt another gender bias measurement strategy and us
     <td class="tg-baqh">5.98%</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2">[215 Social Problematic Queries](https://github.com/CPJKU/FairnessRetrievalResults/blob/main/resources/fairnesssensitive_queries/msmarco_passage.dev.fair.tsv)</td>
+    <td class="tg-0lax" rowspan="2"><a href="https://github.com/CPJKU/FairnessRetrievalResults/blob/main/resources/fairnesssensitive_queries/msmarco_passage.dev.fair.tsv" target="_top">215 Social Problematic Queries]</td>
     <td class="tg-0lax">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_base_uncased_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-baqh">0.029</td>
     <td class="tg-baqh">-</td>
@@ -270,7 +270,7 @@ We further compare our work with the state of the art method that proposes an ad
 <tbody>
   <tr>
     <td class="tg-0pky" rowspan="6">BERT-Tiny</td>
-    <td class="tg-0pky" rowspan="3">[1765 Neutral Queries](https://github.com/navid-rekabsaz/GenderBias_IR/blob/master/resources/queries_gender_annotated.csv)</td>
+    <td class="tg-0pky" rowspan="3"><a href="https:https://github.com/navid-rekabsaz/GenderBias_IR/blob/master/resources/queries_gender_annotated.csv" target="_top">1765 Neutral Queries</td>
     <td class="tg-0pky">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/1765_neutral_queries/bert_tiny_original_dataset.trec" target="_top"> (Run)</td>
     <td class="tg-c3ow">0.219</td>
     <td class="tg-c3ow">0.076</td>
@@ -301,7 +301,7 @@ We further compare our work with the state of the art method that proposes an ad
     <td class="tg-baqh">25.08%</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="3">[215 Social Problematic Queries](https://github.com/CPJKU/FairnessRetrievalResults/blob/main/resources/fairnesssensitive_queries/msmarco_passage.dev.fair.tsv)</td>
+    <td class="tg-0pky" rowspan="3"><a href="https://github.com/CPJKU/FairnessRetrievalResults/blob/main/resources/fairnesssensitive_queries/msmarco_passage.dev.fair.tsv" target="_top">215 Social Problematic Queries]</td>
     <td class="tg-0pky">Original Dataset <a href="https://github.com/biasaware/balanced-relevance-judgment-collection/blob/main/results/trec_runs/215_neutral_queries/bert_tiny_original_dataset.trec"> (Run)</td>
     <td class="tg-c3ow">0.162</td>
     <td class="tg-c3ow">0.005</td>
