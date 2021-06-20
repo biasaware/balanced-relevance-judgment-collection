@@ -15,7 +15,7 @@ def store_documents(searcher, unique_doc_ids):
     for doc_id in unique_doc_ids:
         doc = searcher.doc(str(doc_id))
         doc_id_passage[doc_id] = doc.raw()
-    myfile = open("/home/amin/projects/cikm/phase3/liwc/processed/collection.txt", "w+")
+    myfile = open("/collection.txt", "w+")
     for key, value in doc_id_passage.items():
         text = key + "\t" + value + "\n"
         myfile.write(text)
@@ -101,10 +101,10 @@ def calculate_file_score():
     writes liwc scores of different documents (all in a single directory) in a csv file
     :return:
     """
-    parse, _ = liwc.load_token_parser("/home/amin/projects/cikm/phase3/liwc/LIWC2015Dictionary.dic")
-    with open("/home/amin/projects/cikm/phase3/liwc/processed/documents_liwc_metrics.csv", 'w') as liwc_csv_results:
+    parse, _ = liwc.load_token_parser("/LIWC2015Dictionary.dic")
+    with open("/documents_liwc_metrics.csv", 'w') as liwc_csv_results:
         writer = csv.writer(liwc_csv_results)
-        documents = pd.read_csv("/home/amin/projects/cikm/phase3/liwc/processed/collection.txt", sep = "\t", names = ["pid", "passage"])
+        documents = pd.read_csv("/collection.txt", sep = "\t", names = ["pid", "passage"])
         documents = documents.values.tolist()
         for row in documents:
             doc_str = row[1]
@@ -140,8 +140,6 @@ def calculate_score_cutoff(topn_docs_dict, fm_dictionary):
             total_score[j] += query_score[j]
     for k in range(0,3):
         total_score[k] = total_score[k] / len(topn_docs_dict)
-    # per_query_score = pd.DataFrame(per_query_score, columns = ['qid', 'posemo', 'negemo', 'anx', 'anger' , 'sad','insight', 'cause', 'discrep', 'tentat', 'certain', 'differ', 'affiliation','achiev', 'power', 'reward', 'risk', 'work','leisure', 'home', 'money', 'relig', 'death'] )
-    # per_query_score.to_csv("/home/ir-bias/Amin/IPM/liwc/result/per_query/male_per_query_biased.csv", index = False)
     return total_score
 
 def write_score_cutoffs(csv_path, run_file_path, save_path):
@@ -163,11 +161,11 @@ def main():
   parser.add_argument('-run', type=str, default='')
   parser.add_argument('-res', type=str, default='')
   args = parser.parse_args()
-  searcher = SimpleSearcher('/home/amin/git_repos/anserini/indexes/msmarco-passage/lucene-index-msmarco')
+  searcher = SimpleSearcher('/msmarco-passage/lucene-index-msmarco')
   _, unique_doc_ids = find_top_n_docs(args.run,20)
   store_documents(searcher, unique_doc_ids)
   calculate_file_score()
-  liwc_score_total = write_score_cutoffs("/home/amin/projects/cikm/phase3/liwc/processed/documents_liwc_metrics.csv",args.run, args.res)
+  liwc_score_total = write_score_cutoffs("/documents_liwc_metrics.csv",args.run, args.res)
   df = pd.DataFrame(liwc_score_total, columns = ['cutoff','female','male', 'diff'])
   df.to_csv(args.res, index = False)
   print("finished")
