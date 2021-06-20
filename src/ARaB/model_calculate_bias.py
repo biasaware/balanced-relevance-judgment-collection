@@ -34,7 +34,7 @@ for metric in metrics:
                 qry_bias_perqry[metric][exp_name][_method] = pickle.load(fr)
 
 
-df = pd.read_csv("/home/amin/projects/example/biased.trec", sep = " ", names = ['qid','q0',"docid","r","s","a"])
+df = pd.read_csv("path_to_run_file.trec", sep = " ", names = ['qid','q0',"docid","r","s","a"]) #path to one of the run files in order to get the unique qids
 query_ids = pd.unique(df['qid']).tolist()
 
 eval_results_bias = {}
@@ -80,22 +80,6 @@ for metric in metrics:
                 print ("%25s\t%2d %5s\t%f\t%f\t%f" % (exp_name, at_rank, _method, eval_results_bias[metric][exp_name][_method][at_rank], eval_results_feml[metric][exp_name][_method][at_rank], eval_results_male[metric][exp_name][_method][at_rank]))
                 tmp.append(eval_results_bias[metric][exp_name][_method][at_rank])
         result.append(tmp)
-        # print()
-        # print ("==========")
-
-# df = pd.DataFrame(result, columns = ["cut_off", "TF", "bert_biased", "bert_mixed_5","bert_mixed_10", "bert_mixed_15", "bert_mixed_20", "bert_mixed_25", "bool","bert_biased", "bert_mixed_5","bert_mixed_10", "bert_mixed_15", "bert_mixed_20", "bert_mixed_25"])  
-
-# df = pd.DataFrame(result, columns = ["cut_off", "TF", "bert_mini","bool","bert_mini"])   
-# df.to_csv("/home/amin/projects/cikm/phase3/gender_bias_measurement/metrics/ARaB/ecir_neutrals/bert_tiny_25_50.csv")
-
-
-
-
-
-
-
-
-
-
-
+        print()
+        print ("==========")
 
