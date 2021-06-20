@@ -101,7 +101,7 @@ def calculate_doc_score(doc_str, parse):
 def calculate_file_score():
 
     parse, _ = liwc.load_token_parser("/LIWC2015Dictionary.dic")
-    with open("/home/amin/projects/cikm/phase3/liwc/processed/documents_liwc_metrics.csv", 'w') as liwc_csv_results:
+    with open("/documents_liwc_metrics.csv", 'w') as liwc_csv_results:
         writer = csv.writer(liwc_csv_results)
         documents = pd.read_csv("/collection.txt", sep = "\t", names = ["pid", "passage"])
         documents = documents.values.tolist()
