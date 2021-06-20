@@ -28,15 +28,8 @@ def create_net(record):
 female_attrs = pd.read_csv("../data/psychological_attribues/female_affiliated_documents_attributes.csv")
 male_attrs = pd.read_csv("../data/psychological_attribues/male_affiliated_documents_attributes.csv")
 
-
-female_attrs.drop(['affect','social','family','friend','female','male','cogproc','drives'], axis = 1, inplace = True)
-male_attrs.drop(['affect','social','family','friend','female','male','cogproc','drives'], axis = 1, inplace = True)
-
-
 female_docs_list = female_attrs.values.tolist()
 male_docs_list  = male_attrs.values.tolist()
-
-
 
 print("Execution started !!!")
 
